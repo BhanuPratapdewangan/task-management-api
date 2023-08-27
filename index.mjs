@@ -5,9 +5,9 @@ import cors from "cors";
 import Jwt from "jsonwebtoken";
 
 // import js file
-import { } from "./config.mjs";
-import userModel from "./users.mjs";
-import taskModel from "./tasks.mjs";
+import { } from "./Server/config.mjs";
+import userModel from "./Server/users.mjs";
+import taskModel from "./Server/tasks.mjs";
 
 const app = express();
 const jwtKey = "tms-miraki";
