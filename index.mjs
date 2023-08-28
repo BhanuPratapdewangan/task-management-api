@@ -41,7 +41,7 @@ app.post('/signup', async (req, res) => {
 
 
 // User Login API's
-app.post('/login', async (req, res) => {
+app.get('/login', async (req, res) => {
 
     if (req.body.email && req.body.password) {
 
