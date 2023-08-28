@@ -14,6 +14,7 @@ const app = express();
 const jwtKey = "tms-miraki";
 
 const port = process.env.PORT;
+
 dotenv.config();
 
 // use cors because it's allow share the resources across the application.
@@ -150,7 +151,7 @@ app.get("/", (req, res) => res.type('html').send(html));
 
 // Listen port 3500 on server
 app.listen(port, () => {
-    console.log("Server Started...!" + port);
+    console.log("Server Started...!");
 })
 
 
