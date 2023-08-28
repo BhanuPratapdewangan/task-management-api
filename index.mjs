@@ -3,15 +3,18 @@
 import express from "express";
 import cors from "cors";
 import Jwt from "jsonwebtoken";
+import dotenv from 'dotenv';
 
 // import js file
-import { } from "./Server/config.mjs";
+import connectDB from "./Server/config.mjs";
 import userModel from "./Server/users.mjs";
 import taskModel from "./Server/tasks.mjs";
 
 const app = express();
 const jwtKey = "tms-miraki";
-const port = process.env.PORT || 3500;
+
+const port = process.env.PORT;
+dotenv.config();
 
 // use cors because it's allow share the resources across the application.
 app.use(express.json());
@@ -22,6 +25,8 @@ app.use((req, res, next) => {
     "Access-Control-Allow-Credentials" ,true 
     )
 });
+
+connectDB();
 
 // User SignUp API's
 app.post('/signup', async (req, res) => {
@@ -145,7 +150,7 @@ app.get("/", (req, res) => res.type('html').send(html));
 
 // Listen port 3500 on server
 app.listen(port, () => {
-    console.log("Server Started...!");
+    console.log("Server Started...!" + port);
 })
 
 

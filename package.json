@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Task Management System API",
   "main": "index.mjs",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.mjs"
@@ -18,9 +17,9 @@
     "url": "https://github.com/BhanuPratapdewangan/task-management-api/issues"
   },
   "homepage": "https://github.com/BhanuPratapdewangan/task-management-api#readme",
-
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.5"
