@@ -4,7 +4,9 @@
   "description": "Task Management System API",
   "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
+    "build": "react-scripts build",
     "start": "node index.mjs"
   },
   "repository": {
@@ -16,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/BhanuPratapdewangan/task-management-api/issues"
   },
-  "homepage": "https://github.com/BhanuPratapdewangan/task-management-api#readme",
+  "homepage": "https://BhanuPratapdewangan.github.io/task-management-api",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
